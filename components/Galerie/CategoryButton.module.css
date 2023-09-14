@@ -1,0 +1,17 @@
+.CategoryButton {
+  border: none;
+  margin: 5px;
+  padding: 0.5rem;
+  background-color: #47555e;
+  font-family: inherit;
+  font-size: inherit;
+  color: #EEEEEE
+}
+
+.CategoryButton:hover {
+  opacity: 0.5;
+}
+
+.active {
+  background-color: #9fa6ab;
+}

@@ -1,0 +1,49 @@
+.Footer {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  
+  padding: 1rem;
+}
+
+.Container {
+  width: 50vh;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.Logo {
+  max-height: 100px;
+  object-fit:contain;
+}
+
+.Adresse {
+  text-align: center;
+  align-self: center;
+
+  line-height: 1.5rem;
+  font-size: 0.8rem;  
+  font-weight: 500;
+}
+
+@media screen and (max-width: 820px) {
+
+  .Container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+  
+
+
+

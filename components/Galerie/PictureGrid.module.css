@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  max-width: 80vw;
+  padding: 2rem;
+  
+}
+
+.blur {
+  height: 100vh;
+  min-height: 100%;
+  width: 100vw;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  backdrop-filter: brightness(30%) blur(5px);
+  z-index: 50;
+ /* display: none; */
+}
+
+.blur.active {
+  display: block;
+}
+

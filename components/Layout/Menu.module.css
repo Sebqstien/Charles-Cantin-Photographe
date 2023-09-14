@@ -1,0 +1,64 @@
+.Menu {
+  width: 50%;
+  height: 50%;
+}
+
+.Menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  height: 100%;
+}
+
+.Menu ul li {
+  margin-left: 1rem;
+}
+
+
+.Menu {
+  z-index: 4;
+}
+
+.Menu a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 820px) {
+  .Menu {
+    position: fixed;
+    left: 0;
+    min-width: min-content;
+    height: 100vh;
+    background-color: #EEEEEE;
+    display: none;
+  }
+
+  .Menu.expanded {
+    display: block;
+  }
+  
+  .Menu ul {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+  }
+
+  .Menu ul li {
+    padding: 1.5rem;
+  }
+
+  .Menu ul li a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+
+  .Menu ul li:hover {
+    background-color: hsla(203, 14%, 32%, 0.259);
+  }
+
+}

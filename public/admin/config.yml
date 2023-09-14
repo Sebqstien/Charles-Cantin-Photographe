@@ -1,0 +1,65 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: public/images/uploads
+public_folder: images/uploads
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+    - label: "Galerie"
+      name: "galerie"
+      file: "content/galerie.md"
+      fields:
+        - { label: "Titre", name: "title", widget: "string"}
+        - { label: "Corps", name: "corps", widget: "text"}
+        - label: "Photos"
+          name: "photos"
+          widget: "list"
+          fields:
+            - label: "Photo"
+              name: "photo" 
+              widget: "image" 
+              media_library: 
+                config: 
+                  multiple: true
+            - { label: "Name", name: "name", widget: "string"}
+            - label: "Catégories"
+              name: "categories"
+              widget: "select"
+              multiple: true
+              options: 
+                - { label: "Baptème", value: "bapteme"}
+                - { label: "Bébé", value: "bebe"}
+                - { label: "Famille", value: "famille"}
+                - { label: "Grossesse", value: "grossesse"}
+                - { label: "Mariage", value: "mariage"}
+                - { label: "Portrait", value: "portrait"}
+    - label: "Contact"
+      name: "contact"
+      file: "content/contact.md"
+      fields: 
+        - { label: "Titre", name: "titre", widget: "string"}
+        - { label: "Corps", name: "corps", widget: "text"}
+        - { label: "Adresse du formulaire", name: "form", widget: "string"}
+    - label: "Prestations"
+      name: "prestations"
+      file: "content/prestations.md"
+      fields: 
+        - { label: "Titre", name: "titre", widget: "string"}
+        - { label: "Corps", name: "corps", widget: "string"}
+        - label: "Cartes"
+          name: "cartes"
+          widget: "list"
+          fields: 
+            - { label: "Photo", name: "src", widget: image}
+            - { label: "Titre", name: "titre", widget: "string"}
+            - { label: "Corps", name: "corps", widget: "markdown"}
+            - label: "Prix"
+              name: "prix"
+              widget: "string" 
+              pattern: ["^[0-9]+$", "Doit être un nombre"]
+              required: false
+
+

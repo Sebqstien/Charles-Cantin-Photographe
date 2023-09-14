@@ -1,0 +1,7 @@
+.next/
+node_modules/
+/npm-debug.log
+.DS_Store
+out/
+# Local Netlify folder
+.netlify

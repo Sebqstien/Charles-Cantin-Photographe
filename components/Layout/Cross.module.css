@@ -1,0 +1,23 @@
+.Cross {
+  border: 0;
+  height: 60px;
+  width: 60px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin: 10px 25px;
+  display: none;
+}
+
+.Cross:hover {
+  background-color: #808080;
+}
+
+@media screen and (max-width: 820px) {
+  .Cross.expanded {
+    display: block;
+  }
+  
+}
